@@ -1,44 +1,25 @@
 using System;
-
 namespace Palindrome.Domain
 {
-    class Palindrome
+    class Program
     {
         static void Main(string[] args)
         {
-            string initial = "";
-            Console.WriteLine("Enter a string");
-            string userinput = Console.ReadLine();
-            int userinputLength = userinput.Length;
-            if (userinputLength == 0)
+            string string1, rev;
+            string1 = "Malayalam";
+            char[] ch = string1.ToCharArray();
+            Array.Reverse(ch);
+            rev = new string(ch);
+            bool b = string1.Equals(rev, StringComparison.OrdinalIgnoreCase);
+            if (b == true)
             {
-                Console.WriteLine("Please enter a string");
-
+                Console.WriteLine("" + string1 + " is a Palindrome!");
             }
-
             else
-
             {
-
-                for (int j = userinputLength - 1; j >= 0; j--)
-                {
-                    initial = initial + userinput[j];
-                }
-
-                if (initial == userinput)
-                {
-                    Console.WriteLine(userinput + " is palindrome");
-                }
-                else
-                {
-                    Console.WriteLine(userinput
-                        + " is not a palindrome");
-                }
-
-
-                Console.Read();
+                Console.WriteLine(" " + string1 + " is not a Palindrome!");
             }
+            Console.Read();
         }
     }
-
 }
