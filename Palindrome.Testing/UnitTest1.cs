@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Palindrome.Domain.Palindrome;
 
 namespace Palindrome.Testing
 {
